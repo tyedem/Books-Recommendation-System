@@ -16,6 +16,18 @@ All datasets have been sourced via [Kaggle's Books Dataset](https://www.kaggle.c
 2. For exploratory analysis and recommendation system, refer to `recommendations.ipynb`.
 3. Raw and cleaned datasets are stored in the `Resources` folder.
 
+# Libraries
+In order to run this project, you will need the following libraries:
+
+- pandas
+- pathlib
+- numpy
+- re
+- seaborn
+- matplotlib
+- scipy
+- sklearn
+
 # Data Cleanup 
 To initiate the cleanup process a few key checks and actions were completed on all 3 datasets as required:
 1. Check nulls
