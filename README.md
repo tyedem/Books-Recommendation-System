@@ -105,7 +105,7 @@ Then, I feed the mapping values to X in preparation for the machine learning mod
 
 ## Scikit-Learn's NearestNeighbours
 
-Finally, I create a `find_similar_books` function to feed the data through SKlearn's the K-Nearest Neighbours machine learning model:
+Finally, I create a `find_similar_books` function to feed the data through the K-Nearest Neighbours machine learning model:
 
 ![knn](Images/knn.png)
 
