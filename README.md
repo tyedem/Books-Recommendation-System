@@ -4,12 +4,35 @@
 *[Low Light Photography of Books by Suzy Hazelwood](https://www.pexels.com/photo/low-light-photography-of-books-1301585/) | [Pexels Licensed](https://www.pexels.com/license/)*
 
 
-# Description
-The goal of this project is to develop a recommendation system that provides a list of 10 books that are similar to a book that a customer has already purchased. This system is built using machine learning and utilizes 3 datasets. The books dataset contains all the book titles, ISBNs, author, publisher and year of publication. The user dataset contains the user IDs, location and age. The ratings dataset contains user ids, location, age, ISBNs and book rating scores. All datasets are a subset of books available on Amazon.
-
-The benefits of incoporating a recommendation system for any ecommerce business is to further market available book title offerings that align with past customer purchases to increase the customer's online shopping experience and to drive higher sales and greater revenue for the business.
+# Description & Objective
+The goal of this project is to develop a recommendation system that provides a list of 10 books that are similar to a book that a customer has rated. This project will implement a collaborative-based filtering machine learning model using the Amazon books dataset. The books data contains all the book titles, ISBNs, author, publisher and year of publication. The user dataset contains the user IDs, location and age. The ratings dataset contains user ids, ISBNs and book rating scores. All datasets are a subset of books available on Amazon.
 
 All datasets have been sourced via [Kaggle's Books Dataset](https://www.kaggle.com/datasets/saurabhbagchi/books-dataset).
+
+# Why Build a Recommendation System?
+
+Ecommerce serves customers through its product and service offerings, but in the world of big data, ecommerce businesses need to provide a signal amongst the noise. Efficient filtering to extract and provide useful value is critical to the success of an ecommerce business. This is where a recommendation system brings steps in.
+
+Recommendation systems drive conversions, increase sales and revenue with an overall elevation of the customer experience to promote the growth of customer acquisition and satisfaction.
+
+There are primary recommendation system models.
+
+1. Collaborative Filtering - Recommends items based on similarity measures between users and/or items leveraging the use of a user-item matrix.
+2. Content-Based Filtering - Supervised machine learning to induce classifier to dsicriminate between interesting and uninteresting items for the user.
+
+This project implements the collaborative filtering recommendation system.
+
+# Collaborative Filtering
+
+This model has a few core features that should be acknowledged when reviewing this project:
+
+1. The model's assumption is that people generally tend to like similar things
+2. Predictions are made based on item preferences of similar users
+3. User-Item matrix is used to generate recommendations
+4. Direct User Ratings are obtained through explicit feedback via rating scores
+5. Indirect User Behavior can be obtained through implicit feedback such as listening, watching, purchasing, etc.)
+
+This project is unable to incorporate indirect user behavior with the available dataset and thus it is excluded from this project.
 
 # Project Contents
 1. For the data cleanup, refer to `cleanup.ipynb`.
@@ -105,15 +128,25 @@ Then, I feed the mapping values to X in preparation for the machine learning mod
 
 ## Scikit-Learn's NearestNeighbours
 
-Finally, I create a `find_similar_books` function to feed the data through the K-Nearest Neighbours machine learning model:
+Next, I create a `find_similar_books` function to feed the data through the K-Nearest Neighbours machine learning model:
 
 ![knn](Images/knn.png)
 
- 
+Finally, I assign books to a dictionary to feed to the `find_similar_books` function.
+
+![books-to-dict](Images/books-to-dict.png)
+
+## How to Find Recommendations
+
+In order to find a recommendation, you will need to obtain the Book-ID from the ISBN since the `find_similar_books` value requires the Book-ID to provide recommendations.
+
+
 
 # Recommendation Samples
 
 ## Since you read Brave New World:
+
+
 
 ![brave-new-world](Images/brave-new-world-recommendations.png)
 
@@ -132,3 +165,6 @@ Finally, I create a `find_similar_books` function to feed the data through the K
 6. [Kaggle - Books Dataset](https://www.kaggle.com/code/saurabhbagchi/recommender-system-for-books) 
 7. [Nick McCullum - Recommendations Systems Python](https://nickmccullum.com/python-machine-learning/recommendation-systems-python/)
 8. [Stack Overflow - Assign Unique ID to columns pandas dataframe](https://stackoverflow.com/questions/33283086/assign-unique-id-to-columns-pandas-data-frame)
+9. [Scikit-learn - NearestNeighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html) 
+10. [Scikit-learn - Sparse CSR Matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html)
+11. [Towards Data Science - Handling Sparse Matrix - Concept Behind Compressed Sparse Row (CSR) Matrix](https://towardsdatascience.com/handling-sparse-matrix-concept-behind-compressed-sparse-row-csr-matrix-4fe6abe58a7a)
