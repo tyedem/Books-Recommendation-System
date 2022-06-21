@@ -65,9 +65,30 @@ The books with the highest ratings count and mean include:
 
 # Recommendation System
 
-In order to feed the data into the machine learning model, the alphanumeric ISBN values had to be assigned unique integer data type IDs. This process was executed in the following steps.
+In order to feed the data into the machine learning model, the alphanumeric ISBN values had to be assigned unique integer IDs. This process was executed in the following steps:
 
-1. 
+1. Use .ravel() method to create array of unique ISBN values and store in `book_ids` variable.
+2. Cast `book_ids` array to pandas series.
+3. Convert `book_ids` to pandas DataFrame
+4. Reset index, rename columns to ISBN and Book-ID
+5. Merge `book_ids` DataFrame with all other datasets
+
+## Compressed Sparse Row Matrix
+Leveraging the scipy library, I created a create_matrix function captured below:
+
+![create_matrix](Images/create_matrix.png)
+
+Then I feed the mapping values to X in preparation for the machine learning model:
+
+![X](Images/X.png)
+
+## Sklearn's NearestNeighbours
+
+Finally, I create a find_similar_books function to feed the data through SKlearn's the K-Nearest Neighbours machine learning model:
+
+![knn](Images/knn.png)
+
+ 
 
 # Recommendation Sample
 
@@ -82,7 +103,6 @@ In order to feed the data into the machine learning model, the alphanumeric ISBN
 3. [Geeks For Geeks - Find location of an element in pandas dataframe in python](https://www.geeksforgeeks.org/find-location-of-an-element-in-pandas-dataframe-in-python/)
 4. [Geeks for Geeks - How to check string is alphanumeric or not using regular expressions](https://www.geeksforgeeks.org/how-to-check-string-is-alphanumeric-or-not-using-regular-expression/)
 5. [Geeks for Geeks - Recommendation system in Python](https://www.geeksforgeeks.org/recommendation-system-in-python/?ref=rp)
-[Kaggle - Books Dataset](https://www.kaggle.com/code/saurabhbagchi/recommender-system-for-books)
 6. [Kaggle - Books Dataset](https://www.kaggle.com/code/saurabhbagchi/recommender-system-for-books) 
 7. [Nick McCullum - Recommendations Systems Python](https://nickmccullum.com/python-machine-learning/recommendation-systems-python/)
 8. [Stack Overflow - Assign Unique ID to columns pandas dataframe](https://stackoverflow.com/questions/33283086/assign-unique-id-to-columns-pandas-data-frame)
