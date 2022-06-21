@@ -113,7 +113,7 @@ Finally, I create a `find_similar_books` function to feed the data through the K
 
 # Recommendation Samples
 
-## Since you read Brave New World Code:
+## Since you read Brave New World:
 
 ![brave-new-world](Images/brave-new-world-recommendations.png)
 
