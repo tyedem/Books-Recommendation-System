@@ -49,7 +49,7 @@ Following this standard cleanup, each dataframe was explored for its unique qual
 2. <b>Location</b> - Some location values were not null, but were strings 'n/a, n/a, n/a'. Observations with this value were dropped from the dataset.<br/>
 
 ## Ratings Data Cleanup
-1. <b>Book Rating - '0' </b> - There was a high count of book rating scores of 0. This score provides little value to the recommendation system and thus all observations with a 0 rating were removed from the dataset.<br/>
+1. <b>Book Rating - '0' </b> - There was a high count of book rating scores of 0. This score provides no value to the recommendation system and thus all observations with a 0 rating were removed from the dataset.<br/>
 
 # Exploratory Analysis
 
