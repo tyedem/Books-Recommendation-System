@@ -53,7 +53,7 @@ Following this standard cleanup, each dataframe was explored for its unique qual
 
 # Exploratory Analysis
 
-Exploring and understanding the data is important since we want to be sure we know what data and features are being fed into our machine learning model. Below I highlight to some key statistics and visualizations.
+Exploring and understanding the data is important since we want to be sure we know what data and features are being fed into our machine learning model. Below I highlight some key statistics and visualizations.
 
 ## Key Dataset Statistics
 
@@ -66,12 +66,21 @@ The books with the highest ratings count and mean include:
 ![counts](Images/counts.png)
 
 ## Histogram - Ratings Count
+
+Exploring the density of the book ratings count:
+
 ![histogram-ratings-count](Images/histo1.png)
 
 ## Histogram - Average Rating
+
+Exploring the average rating score. You'll notice there are peaks where books are rated from 5-10.
+
 ![histogram-average-rating](Images/histo2.png)
 
 ## Histogram - Ratings Average and Count Joint Plot
+
+This joint plot shows a clear description over where the distribution of the ratings count lies. Each dot represents a book and you can see the vast majority of the average book rating lies in the score of 8 zone.
+
 ![joint-histogram](Images/joint-histo.png)
 
 
@@ -90,11 +99,11 @@ Leveraging the scipy library, I created a `create_matrix` function captured belo
 
 ![create_matrix](Images/create_matrix.png)
 
-Then I feed the mapping values to X in preparation for the machine learning model:
+Then, I feed the mapping values to X in preparation for the machine learning model:
 
 ![X](Images/X.png)
 
-## Sklearn's NearestNeighbours
+## Scikit-Learn's NearestNeighbours
 
 Finally, I create a `find_similar_books` function to feed the data through SKlearn's the K-Nearest Neighbours machine learning model:
 
@@ -102,11 +111,16 @@ Finally, I create a `find_similar_books` function to feed the data through SKlea
 
  
 
-# Recommendation Sample
+# Recommendation Samples
 
-## Since you read the The Da Vinci Code:
+## Since you read Brave New World Code:
 
-![recommendations](Images/da-vinci-code-recommendations.png)
+![brave-new-world](Images/brave-new-world-recommendations.png)
+
+## Since you read The Da Vinci Code:
+
+![da-vinci-code](Images/da-vinci-code-recommendations.png)
+
 
 # Resources
 
