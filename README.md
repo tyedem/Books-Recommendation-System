@@ -91,7 +91,7 @@ In order to feed the data into the machine learning model, the alphanumeric ISBN
 1. Use `.ravel()` method to create array of unique ISBN values and store in `book_ids` variable.
 2. Cast `book_ids` array to pandas series.
 3. Convert `book_ids` to pandas DataFrame
-4. Reset index, rename columns to ISBN and Book-ID
+4. Reset index of `book_ids`, rename columns to ISBN and Book-ID
 5. Merge `book_ids` DataFrame with all other datasets
 
 ## Compressed Sparse Row Matrix
