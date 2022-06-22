@@ -89,6 +89,8 @@ The books with the highest ratings count and mean include:
 
 ## Top 10 User Ratings Count
 
+Below are the top 10 'super' raters:
+
 ![user-counts](Images/top10-ratings-count.png)
 
 ## Histogram - Ratings Count
@@ -161,9 +163,9 @@ In order to find a recommendation, you will need to obtain the Book-ID from the 
 
 # Next Steps
 
-1. Performance evaluation
-2. Tuning and exploring other machine learning models for best performance
-3. Feature Engineering - Remove book title duplicates with unique ISBNs
+1. Book Title Cleanup - Remove book title duplicates with unique ISBNs 
+2. Performance evaluation
+3. Tuning and exploring other machine learning cluserting algorithms for best performance
 
 This is an ongoing project and will be updated until the best performing recommendation system is developed.
 
